@@ -24,30 +24,51 @@ body {
     border-radius: 0 0 30px 30px;
 }
 
-/* Пате */
-.duck {
+/* Основен стил за патето */
+.duck, .duckling {
     position: absolute;
-    bottom: 120px; /* Височина на патето */
-    left: 10%;
-    width: 70px; /* Увеличен размер на патето */
-    height: 70px;
+    bottom: 120px;
+    width: 80px;
+    height: 80px;
     background-color: yellow;
-    border-radius: 50%; /* Оформя го като кръг */
+    border-radius: 50%;
     animation: walk 10s infinite linear;
 }
 
-/* Малки патенца */
+/* Стилове за малки патенца */
 .duckling {
-    position: absolute;
-    bottom: 120px; /* Височина на патенцата */
-    width: 50px; /* Увеличен размер на патенцата */
-    height: 50px;
     background-color: pink;
-    border-radius: 50%; /* Оформя го като кръг */
-    animation: walk 10s infinite linear;
+    width: 50px;
+    height: 50px;
 }
 
-/* Разстояние и анимация на патенцата */
+/* Очи на патетата */
+.duck-eye, .duckling .duck-eye {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    width: 10px;
+    height: 10px;
+    background-color: black;
+    border-radius: 50%;
+}
+
+/* Клюн на патето */
+.duck-beak {
+    position: absolute;
+    bottom: 10px;
+    left: 25px;
+    width: 30px;
+    height: 10px;
+    background-color: orange;
+    border-radius: 5px;
+}
+
+/* Позициониране на патето и патенцата */
+.duck {
+    left: 10%;
+}
+
 .duckling:nth-child(2) {
     left: 20%;
     animation-delay: 1s;
