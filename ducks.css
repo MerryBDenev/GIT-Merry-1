@@ -24,48 +24,47 @@ body {
     border-radius: 0 0 30px 30px;
 }
 
-.duck, .duckling {
-    position: absolute;
-    bottom: 100px; /* Задава височината на патето и патенцата */
-    width: 50px;
-    height: 50px;
-    background-color: yellow;
-    border-radius: 50%;
-    animation: walk 10s infinite linear;
-}
-
-.duckling {
-    background-color: pink;
-    width: 30px;
-    height: 30px;
-}
-
+/* Пате */
 .duck {
+    position: absolute;
+    bottom: 120px; /* Височина на патето */
     left: 10%;
+    width: 70px; /* Увеличен размер на патето */
+    height: 70px;
+    background-color: yellow;
+    border-radius: 50%; /* Оформя го като кръг */
     animation: walk 10s infinite linear;
 }
 
+/* Малки патенца */
+.duckling {
+    position: absolute;
+    bottom: 120px; /* Височина на патенцата */
+    width: 50px; /* Увеличен размер на патенцата */
+    height: 50px;
+    background-color: pink;
+    border-radius: 50%; /* Оформя го като кръг */
+    animation: walk 10s infinite linear;
+}
+
+/* Разстояние и анимация на патенцата */
 .duckling:nth-child(2) {
     left: 20%;
-    animation: walk 10s infinite linear;
     animation-delay: 1s;
 }
 
 .duckling:nth-child(3) {
     left: 30%;
-    animation: walk 10s infinite linear;
     animation-delay: 2s;
 }
 
 .duckling:nth-child(4) {
     left: 40%;
-    animation: walk 10s infinite linear;
     animation-delay: 3s;
 }
 
 .duckling:nth-child(5) {
     left: 50%;
-    animation: walk 10s infinite linear;
     animation-delay: 4s;
 }
 
