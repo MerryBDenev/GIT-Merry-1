@@ -30,8 +30,8 @@ body {
 .duck {
     position: absolute;
     bottom: 120px; /* Позициониране на всички патета и патенца */
-    width: 220px; /* Увеличаваме размера на майката (2 пъти по-голямо от патенцата) */
-    height: 220px;
+    width: 200px; /* Увеличаваме размера на майката (2 пъти по-голямо от патенцата) */
+    height: 200px;
     background-color: yellow; /* Патето е жълто */
     border-radius: 50%; /* Кръгла форма */
     animation: walk 10s infinite linear;
