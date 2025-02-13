@@ -6,6 +6,8 @@
 
 body {
     font-family: Arial, sans-serif;
+    height: 100vh;
+    overflow: hidden;
 }
 
 .background {
@@ -27,18 +29,18 @@ body {
 /* Основен стил за патето */
 .duck, .duckling {
     position: absolute;
-    bottom: 120px;
-    width: 80px;
-    height: 80px;
-    background-color: yellow;
-    border-radius: 50%;
+    bottom: 120px; /* Позициониране на всички патета и патенца */
+    width: 70px; /* Размер на патето */
+    height: 70px;
+    background-color: yellow; /* Патето е жълто */
+    border-radius: 50%; /* Кръгла форма */
     animation: walk 10s infinite linear;
 }
 
-/* Стилове за малки патенца */
+/* Малки патенца */
 .duckling {
-    background-color: pink;
-    width: 50px;
+    background-color: pink; /* Патенцата са розови */
+    width: 50px; /* Размер на патенцата */
     height: 50px;
 }
 
@@ -66,7 +68,7 @@ body {
 
 /* Позициониране на патето и патенцата */
 .duck {
-    left: 10%;
+    left: 10%; /* Патето започва отляво */
 }
 
 .duckling:nth-child(2) {
@@ -89,6 +91,11 @@ body {
     animation-delay: 4s;
 }
 
+.duckling:nth-child(6) {
+    left: 60%;
+    animation-delay: 5s;
+}
+
 /* Анимация за движение */
 @keyframes walk {
     0% {
@@ -101,3 +108,4 @@ body {
         transform: translateX(0);
     }
 }
+
