@@ -29,23 +29,23 @@ body {
 /* Основен стил за патето (майката) */
 .duck {
     position: absolute;
-    bottom: 120px; /* Позициониране на всички патета и патенца */
-    width: 140px; /* Увеличаваме размера на майката (2 пъти по-голямо от патенцата) */
+    bottom: 120px;
+    width: 140px; /* Увеличаваме размера на майката */
     height: 140px;
-    background-color: yellow; /* Патето е жълто */
-    border-radius: 50%; /* Кръгла форма */
+    background-color: yellow;
+    border-radius: 50%;
     animation: walk 10s infinite linear;
 }
 
 /* Малки патенца */
 .duckling {
     position: absolute;
-    bottom: 120px; /* Позициониране на патенцата */
+    bottom: 120px;
     width: 50px; /* Размер на патенцата */
     height: 50px;
-    background-color: pink; /* Патенцата са розови */
-    border-radius: 50%; /* Кръгла форма */
-    animation: walk 10s infinite linear, jump 1.2s infinite alternate ease-in-out;
+    background-color: pink;
+    border-radius: 50%;
+    animation: jump 1.2s infinite alternate ease-in-out, follow 10s infinite linear;
 }
 
 /* Очи на патетата */
@@ -76,28 +76,28 @@ body {
 }
 
 .duckling:nth-child(2) {
+    animation-delay: 1s, 0.5s;
     left: 20%;
-    animation-delay: 1s, 0.5s; /* Подскача по-късно от майката */
 }
 
 .duckling:nth-child(3) {
+    animation-delay: 2s, 1s;
     left: 30%;
-    animation-delay: 2s, 1s; /* Подскача още по-късно */
 }
 
 .duckling:nth-child(4) {
+    animation-delay: 3s, 1.5s;
     left: 40%;
-    animation-delay: 3s, 1.5s; /* Подскача с малко забавяне */
 }
 
 .duckling:nth-child(5) {
+    animation-delay: 4s, 2s;
     left: 50%;
-    animation-delay: 4s, 2s; /* Редуване на подскокове */
 }
 
 .duckling:nth-child(6) {
+    animation-delay: 5s, 2.5s;
     left: 60%;
-    animation-delay: 5s, 2.5s; /* Още едно забавяне на подскока */
 }
 
 /* Анимация за движение (пате и патенца) */
@@ -113,7 +113,7 @@ body {
     }
 }
 
-/* Анимация за подскачане на патенцата (по-високи подскокове) */
+/* Анимация за подскачане на патенцата */
 @keyframes jump {
     0% {
         transform: translateY(0);
@@ -131,3 +131,17 @@ body {
         transform: translateY(0);
     }
 }
+
+/* Анимация за следване на майката патица */
+@keyframes follow {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(10vw); /* Следване на майката - малко изоставане */
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
