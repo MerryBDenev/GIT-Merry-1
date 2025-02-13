@@ -29,23 +29,23 @@ body {
 /* Основен стил за патето (майката) */
 .duck {
     position: absolute;
-    bottom: 120px;
-    width: 140px; /* Увеличаваме размера на майката */
+    bottom: 120px; /* Позициониране на всички патета и патенца */
+    width: 140px; /* Увеличаваме размера на майката (2 пъти по-голямо от патенцата) */
     height: 140px;
-    background-color: yellow;
-    border-radius: 50%;
+    background-color: yellow; /* Патето е жълто */
+    border-radius: 50%; /* Кръгла форма */
     animation: walk 10s infinite linear;
 }
 
 /* Малки патенца */
 .duckling {
     position: absolute;
-    bottom: 120px;
+    bottom: 120px; /* Позициониране на патенцата */
     width: 50px; /* Размер на патенцата */
     height: 50px;
-    background-color: pink;
-    border-radius: 50%;
-    animation: jump 1.2s infinite alternate ease-in-out, move 10s infinite linear;
+    background-color: pink; /* Патенцата са розови */
+    border-radius: 50%; /* Кръгла форма */
+    animation: walk 10s infinite linear;
 }
 
 /* Очи на патетата */
@@ -76,31 +76,31 @@ body {
 }
 
 .duckling:nth-child(2) {
-    animation-delay: 1s, 0.5s;
     left: 20%;
+    animation-delay: 1s;
 }
 
 .duckling:nth-child(3) {
-    animation-delay: 2s, 1s;
     left: 30%;
+    animation-delay: 2s;
 }
 
 .duckling:nth-child(4) {
-    animation-delay: 3s, 1.5s;
     left: 40%;
+    animation-delay: 3s;
 }
 
 .duckling:nth-child(5) {
-    animation-delay: 4s, 2s;
     left: 50%;
+    animation-delay: 4s;
 }
 
 .duckling:nth-child(6) {
-    animation-delay: 5s, 2.5s;
     left: 60%;
+    animation-delay: 5s;
 }
 
-/* Анимация за движение (пате и патенца) */
+/* Анимация за движение */
 @keyframes walk {
     0% {
         transform: translateX(0);
@@ -111,49 +111,4 @@ body {
     100% {
         transform: translateX(0);
     }
-}
-
-/* Анимация за подскачане на патенцата */
-@keyframes jump {
-    0% {
-        transform: translateY(0);
-    }
-    25% {
-        transform: translateY(-40px); /* Подскачане на 40px */
-    }
-    50% {
-        transform: translateY(0);
-    }
-    75% {
-        transform: translateY(-50px); /* По-висок подскок - 50px */
-    }
-    100% {
-        transform: translateY(0);
-    }
-}
-
-/* Анимация за следване на майката патица */
-@keyframes move {
-    0% {
-        transform: translateX(0);
-    }
-    50% {
-        transform: translateX(10vw); /* Следване на майката */
-    }
-    100% {
-        transform: translateX(0);
-    }
-}
-
-/* Стил за текста "Merry Bellonimy" */
-.text {
-    position: absolute;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%) rotate(-10deg); /* Завъртаме текста под наклон */
-    font-size: 3rem;
-    font-family: 'Arial', sans-serif;
-    font-weight: bold;
-    color: #FF69B4; /* Розов цвят */
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
 }
