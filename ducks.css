@@ -45,7 +45,7 @@ body {
     height: 50px;
     background-color: pink; /* Патенцата са розови */
     border-radius: 50%; /* Кръгла форма */
-    animation: walk 10s infinite linear, jump 1s infinite alternate ease-in-out;
+    animation: walk 10s infinite linear, jump 1.2s infinite alternate ease-in-out;
 }
 
 /* Очи на патетата */
@@ -77,27 +77,27 @@ body {
 
 .duckling:nth-child(2) {
     left: 20%;
-    animation-delay: 1s;
+    animation-delay: 1s, 0.5s; /* Подскача по-късно от майката */
 }
 
 .duckling:nth-child(3) {
     left: 30%;
-    animation-delay: 2s;
+    animation-delay: 2s, 1s; /* Подскача още по-късно */
 }
 
 .duckling:nth-child(4) {
     left: 40%;
-    animation-delay: 3s;
+    animation-delay: 3s, 1.5s; /* Подскача с малко забавяне */
 }
 
 .duckling:nth-child(5) {
     left: 50%;
-    animation-delay: 4s;
+    animation-delay: 4s, 2s; /* Редуване на подскокове */
 }
 
 .duckling:nth-child(6) {
     left: 60%;
-    animation-delay: 5s;
+    animation-delay: 5s, 2.5s; /* Още едно забавяне на подскока */
 }
 
 /* Анимация за движение (пате и патенца) */
@@ -113,42 +113,21 @@ body {
     }
 }
 
-/* Анимация за подскачане на патенцата (с различни височини) */
+/* Анимация за подскачане на патенцата (по-високи подскокове) */
 @keyframes jump {
     0% {
         transform: translateY(0);
     }
     25% {
-        transform: translateY(-15px); /* Първоначално подскачане - 15px */
+        transform: translateY(-40px); /* Подскачане на 40px */
     }
     50% {
         transform: translateY(0);
     }
     75% {
-        transform: translateY(-25px); /* По-висок подскок - 25px */
+        transform: translateY(-50px); /* По-висок подскок - 50px */
     }
     100% {
         transform: translateY(0);
     }
-}
-
-/* Създаване на вълна ефект чрез редуване на подскоците */
-.duckling:nth-child(2) {
-    animation-delay: 1s, 0.5s; /* Подскача по-късно от майката */
-}
-
-.duckling:nth-child(3) {
-    animation-delay: 2s, 1s; /* Подскача още по-късно */
-}
-
-.duckling:nth-child(4) {
-    animation-delay: 3s, 1.5s; /* Подскача с малко забавяне */
-}
-
-.duckling:nth-child(5) {
-    animation-delay: 4s, 2s; /* Редуване на подскокове */
-}
-
-.duckling:nth-child(6) {
-    animation-delay: 5s, 2.5s; /* Още едно забавяне на подскока */
 }
