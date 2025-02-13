@@ -26,12 +26,12 @@ body {
     border-radius: 0 0 30px 30px;
 }
 
-/* Основен стил за патето */
-.duck, .duckling {
+/* Основен стил за патето (майката) */
+.duck {
     position: absolute;
     bottom: 120px; /* Позициониране на всички патета и патенца */
-    width: 70px; /* Размер на патето */
-    height: 70px;
+    width: 140px; /* Увеличаваме размера на майката (2 пъти по-голямо от патенцата) */
+    height: 140px;
     background-color: yellow; /* Патето е жълто */
     border-radius: 50%; /* Кръгла форма */
     animation: walk 10s infinite linear;
@@ -39,9 +39,13 @@ body {
 
 /* Малки патенца */
 .duckling {
-    background-color: pink; /* Патенцата са розови */
+    position: absolute;
+    bottom: 120px; /* Позициониране на патенцата */
     width: 50px; /* Размер на патенцата */
     height: 50px;
+    background-color: pink; /* Патенцата са розови */
+    border-radius: 50%; /* Кръгла форма */
+    animation: walk 10s infinite linear, jump 1s infinite alternate ease-in-out;
 }
 
 /* Очи на патетата */
@@ -96,7 +100,7 @@ body {
     animation-delay: 5s;
 }
 
-/* Анимация за движение */
+/* Анимация за движение (пате и патенца) */
 @keyframes walk {
     0% {
         transform: translateX(0);
@@ -109,3 +113,15 @@ body {
     }
 }
 
+/* Анимация за подскачане на патенцата */
+@keyframes jump {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px); /* Подскок на 20px нагоре */
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
