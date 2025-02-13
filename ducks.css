@@ -26,7 +26,7 @@ body {
 
 .duck, .duckling {
     position: absolute;
-    bottom: 100px; /* Задава височината на патето и патенцата */
+    bottom: 120px; /* Задава височината на патето и патенцата */
     width: 50px;
     height: 50px;
     background-color: yellow;
@@ -81,3 +81,4 @@ body {
         transform: translateX(0);
     }
 }
+
