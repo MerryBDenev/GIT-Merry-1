@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.background {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-color: #87CEEB; /* Син фон, като небето */
+}
+
+.lake {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 200px;
+    background-color: #1E90FF; /* Синьо езеро */
+    border-radius: 0 0 30px 30px;
+}
+
+.duck, .duckling {
+    position: absolute;
+    bottom: 100px; /* Задава височината на патето и патенцата */
+    width: 50px;
+    height: 50px;
+    background-color: yellow;
+    border-radius: 50%;
+    animation: walk 10s infinite linear;
+}
+
+.duckling {
+    background-color: pink;
+    width: 30px;
+    height: 30px;
+}
+
+.duck {
+    left: 10%;
+    animation: walk 10s infinite linear;
+}
+
+.duckling:nth-child(2) {
+    left: 20%;
+    animation: walk 10s infinite linear;
+    animation-delay: 1s;
+}
+
+.duckling:nth-child(3) {
+    left: 30%;
+    animation: walk 10s infinite linear;
+    animation-delay: 2s;
+}
+
+.duckling:nth-child(4) {
+    left: 40%;
+    animation: walk 10s infinite linear;
+    animation-delay: 3s;
+}
+
+.duckling:nth-child(5) {
+    left: 50%;
+    animation: walk 10s infinite linear;
+    animation-delay: 4s;
+}
+
+/* Анимация за движение */
+@keyframes walk {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(100vw);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
