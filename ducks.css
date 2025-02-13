@@ -30,8 +30,8 @@ body {
 .duck {
     position: absolute;
     bottom: 120px; /* Позициониране на всички патета и патенца */
-    width: 140px; /* Увеличаваме размера на майката (2 пъти по-голямо от патенцата) */
-    height: 140px;
+    width: 200px; /* Увеличаваме размера на майката (2 пъти по-голямо от патенцата) */
+    height: 200px;
     background-color: yellow; /* Патето е жълто */
     border-radius: 50%; /* Кръгла форма */
     animation: walk 10s infinite linear;
@@ -110,5 +110,22 @@ body {
     }
     100% {
         transform: translateX(0);
+    }
+/* Анимация за подскачане на патенцата (по-високи подскокове) */
+@keyframes jump {
+    0% {
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY(-40px); /* Подскачане на 40px */
+    }
+    50% {
+        transform: translateY(0);
+    }
+    75% {
+        transform: translateY(-50px); /* По-висок подскок - 50px */
+    }
+    100% {
+        transform: translateY(0);
     }
 }
